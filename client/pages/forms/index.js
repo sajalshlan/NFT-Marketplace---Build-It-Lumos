@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function form() {
   return (
-    <div>
-      <div className="flex justify-between py-4 lg:px-60 md:px-20 sm:px-10  text-2xl">
+    <>
+      {/* <div className="flex justify-between py-4 lg:px-60 md:px-20 sm:px-10  text-2xl">
         <a className="font-medium" href="">
           AssHub
         </a>
@@ -16,19 +16,19 @@ export default function form() {
             Buy Digital Art
           </a>
         </div>
-      </div>
+      </div> */}
 
-      <div className="flex justify-between  mx-auto lg:px-60 md:px-20 sm:px-10 py-16">
-        <form className="text-black w-80  ">
+      <div className="flex justify-between mx-auto lg:px-60 md:px-20 sm:px-10 py-16">
+         <form className="text-black w-[50%]  ">
           <label
             className="block text-gray-700 text-lg font-medium mb-2"
-            for="assetName"
+            htmlFor="assetName"
           >
-            AssetName
+            Asset Name
           </label>
           <input
-            className="shadow appearance-none  rounded-3xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline
-            border-2 border-gray-300  mb-8"
+            className="shadow appearance-none  rounded-lg w-full p-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline
+            border-2 border-gray-300  mb-5"
             id="assetName"
             type="text"
             placeholder="The Ape NFT"
@@ -36,39 +36,39 @@ export default function form() {
 
           <label
             className="block text-gray-700 text-lg font-medium mb-2"
-            for="assetDiscription"
+            htmlFor="assetDiscription"
           >
-            Asset Discription
+            Asset Description
           </label>
           <textarea
-            className="shadow appearance-none  rounded-2xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline
-            border-2 border-gray-300 mb-8"
+            className="shadow appearance-none h-36 rounded-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline
+            border-2 border-gray-300 mb-5"
             id="assetDiscription"
             placeholder="The Latest NFT using Opensea"
           ></textarea>
 
           <label
             className="block text-gray-700 text-lg font-medium mb-2"
-            for="assetPrice"
+            htmlFor="assetPrice"
           >
-            AssetPrice
+            Asset Price
           </label>
           <input
-            className="shadow appearance-none  rounded-3xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline
-            border-2 border-gray-300  mb-8"
+            className="shadow appearance-none  rounded-lg w-full p-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline
+            border-2 border-gray-300  mb-5"
             id="assetPrice"
             type="number"
             placeholder="Enter the price in ETH"
           ></input>
 
           <label
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-700"
-            for="default_size"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-700"
+            htmlFor="default_size"
           >
             Upload NFT
           </label>
           <input
-            class="block mb-5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-100 dark:placeholder-gray-400 p-2"
+            className="block mb-5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-100 dark:placeholder-gray-400 p-2"
             id="default_size"
             type="file"
           ></input>
@@ -82,8 +82,8 @@ export default function form() {
           </button>
         </form>
 
-        <div className="flex flex-col shadow-md px-6">
-          <h2 className="uppercase text-black font-medium text-sm mt-4 text-center">
+        <div className="flex flex-col shadow-2xl rounded-md px-6 w-[40%] py-10 h-full items-center ">
+          <h2 className="uppercase text-black font-medium text-sm  text-center">
             ARE YOU READY ?
           </h2>
           <p className="text-gray-400 text-center mt-4">
@@ -98,19 +98,19 @@ export default function form() {
           mt-8"
           />
 
-          <div class="flex justify-center items-center flex-wrap space-x-7 mt-12">
+          <div className="flex justify-center items-center flex-wrap space-x-7 mt-12">
             {/* <!-- Discord --> */}
             <button
               type="button"
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
-              class="inline-block  p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
-              style={{ backgroundColor: "#000" }}
+              className="inline-block  p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+              style={{ backgroundColor: '#000' }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 640 512"
-                class="w-4 h-4"
+                className="w-4 h-4"
               >
                 <path
                   fill="currentColor"
@@ -124,13 +124,13 @@ export default function form() {
               type="button"
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
-              class="inline-block p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
-              style={{ backgroundColor: "#000" }}
+              className="inline-block p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+              style={{ backgroundColor: '#000' }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512"
-                class="w-4 h-4"
+                className="w-4 h-4"
               >
                 <path
                   fill="currentColor"
@@ -144,13 +144,13 @@ export default function form() {
               type="button"
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
-              class="inline-block p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
-              style={{ backgroundColor: "#000" }}
+              className="inline-block p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+              style={{ backgroundColor: '#000' }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
-                class="w-4 h-4"
+                className="w-4 h-4"
               >
                 <path
                   fill="currentColor"
@@ -161,6 +161,6 @@ export default function form() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
