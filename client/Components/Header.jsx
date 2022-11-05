@@ -1,6 +1,6 @@
 import React from 'react';
 import NFTCard from './NFTCard';
-import bandar from '../assets/bandar.png';
+import bandar from '../public/bandar.png';
 
 const title = text => {
   return (

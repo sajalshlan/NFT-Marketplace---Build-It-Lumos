@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Social from '../../Components/Social';
-import wallet from '../../assets/wallet.svg';
+import wallet from '../../public/wallet.svg';
 
 export default function metaMask() {
   return (
