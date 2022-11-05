@@ -1,18 +1,18 @@
 export default function Social() {
   return (
-    <div class="flex justify-center items-center flex-wrap space-x-7 mt-12">
+    <div className="flex justify-center items-center flex-wrap space-x-7 mt-12">
       {/* <!-- Discord --> */}
       <button
         type="button"
         data-mdb-ripple="true"
         data-mdb-ripple-color="light"
-        class="inline-block  p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
-        style={{ backgroundColor: "#000" }}
+        className="inline-block  p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+        style={{ backgroundColor: '#000' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 640 512"
-          class="w-4 h-4"
+          className="w-4 h-4"
         >
           <path
             fill="currentColor"
@@ -26,13 +26,13 @@ export default function Social() {
         type="button"
         data-mdb-ripple="true"
         data-mdb-ripple-color="light"
-        class="inline-block p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
-        style={{ backgroundColor: "#000" }}
+        className="inline-block p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+        style={{ backgroundColor: '#000' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512"
-          class="w-4 h-4"
+          className="w-4 h-4"
         >
           <path
             fill="currentColor"
@@ -46,13 +46,13 @@ export default function Social() {
         type="button"
         data-mdb-ripple="true"
         data-mdb-ripple-color="light"
-        class="inline-block p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
-        style={{ backgroundColor: "#000" }}
+        className="inline-block p-4 mb-2 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+        style={{ backgroundColor: '#000' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          class="w-4 h-4"
+          className="w-4 h-4"
         >
           <path
             fill="currentColor"
