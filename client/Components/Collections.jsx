@@ -1,9 +1,9 @@
 import React from 'react';
 import NFTCard from './NFTCard';
-import bandar from '../assets/bandar.png';
-import skeletons from '../assets/skeletons.png';
-import powerRangers from '../assets/powerRangers.png';
-import games from '../assets/games.jpg';
+import bandar from '../public/bandar.png';
+import skeletons from '../public/skeletons.png';
+import powerRangers from '../public/powerRangers.png';
+import games from '../public/games.jpg';
 
 const DUMMY_DATA = [
   {
