@@ -1,107 +1,49 @@
 import Image from "next/image";
-import Social from "G:/NFT MarketPlace Project Hackathon/NFT-Marketplace---Build-It-Lumos/client/Components/.jsx";
+import Social from "G:/NFT MarketPlace Project Hackathon/NFT-Marketplace---Build-It-Lumos/client/Components/Social.jsx";
 
-export default function form() {
+export default function metaMask() {
   return (
     <div>
-      <div className="flex justify-between py-4 lg:px-60 md:px-20 sm:px-10  text-2xl">
-        <a className="font-medium" href="">
+      <div className="flex justify-between sm:px-10 lg:px-20 xl:px-40 py-5">
+        <a className="font-bold text-xl" href="">
           AssHub
         </a>
-
-        <div className="flex justify-between text-gray-500 ">
-          <a className="px-3" href="">
-            Sell Digital Art
-          </a>
-          <a className="px-3" href="">
-            Buy Digital Art
-          </a>
-        </div>
+        <a
+          className="border-2 rounded-xl  px-4 py-1 border-gray-700 bg-gray-300 "
+          href=""
+        >
+          Upload Now
+        </a>
       </div>
 
-      <div className="block md:flex lg:flex sm:flex xs:block justify-between   lg:px-60 md:px-20 sm:px-10 xs:p-5 py-16 container mx-auto ">
-        <form className="text-black w-80 mb-10">
-          <label
-            className="block text-gray-700 text-lg font-medium mb-2"
-            for="assetName"
-          >
-            AssetName
-          </label>
-          <input
-            className="shadow appearance-none  rounded-3xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline
-            border-2 border-gray-300  mb-8"
-            id="assetName"
-            type="text"
-            placeholder="The Ape NFT"
-          ></input>
-
-          <label
-            className="block text-gray-700 text-lg font-medium mb-2"
-            for="assetDiscription"
-          >
-            Asset Discription
-          </label>
-          <textarea
-            className="shadow appearance-none  rounded-2xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline
-            border-2 border-gray-300 mb-8"
-            id="assetDiscription"
-            placeholder="The Latest NFT using Opensea"
-          ></textarea>
-
-          <label
-            className="block text-gray-700 text-lg font-medium mb-2"
-            for="assetPrice"
-          >
-            AssetPrice
-          </label>
-          <input
-            className="shadow appearance-none  rounded-3xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline
-            border-2 border-gray-300  mb-8"
-            id="assetPrice"
-            type="number"
-            placeholder="Enter the price in ETH"
-          ></input>
-
-          <label
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-700"
-            for="default_size"
-          >
-            Upload NFT
-          </label>
-          <input
-            class="block mb-5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-100 dark:placeholder-gray-400 p-2"
-            id="default_size"
-            type="file"
-          ></input>
-
-          <button
-            type="button"
-            className="mt-2 w-full inline-block px-6 py-2.5 bg-black text-white font-medium leading-normal  shadow-md hover:bg-white 
-            text-lg  hover:border-2 hover:border-black  hover:text-black focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out rounded-2xl"
-          >
-            Create Digital Art
-          </button>
-        </form>
-
-        <div className="flex flex-col shadow-md px-6 rounded-3xl">
-          <h2 className="uppercase text-black font-medium text-sm mt-4 text-center">
-            ARE YOU READY ?
-          </h2>
-          <p className="text-gray-400 text-center mt-4">
-            FLY TO THE MOON WITH NFTS
-          </p>
+      <div className="flex flex-col w-56 align-middle justify-center mx-auto mt-28 relative">
+        <div className="bg-[#A8D594] rounded-full p-3 w-16 h-16 flex justify-center align-middle mx-auto">
           <Image
-            src="/panda.png"
-            alt="panda"
-            width="200"
-            height="200"
-            className="
-          mt-8 mx-auto p-4"
+            src="/wallet-vector.png"
+            alt="wallet image"
+            width="15"
+            height="15"
+            className="mx-auto"
           />
+        </div>
 
-          <Social />
+        <h2 className="font-medium text-2xl text-center mt-6">
+          Connect Your Wallet
+        </h2>
+
+        <div className="shadow p-10 rounded-xl mt-6 hover:text-white hover:bg-black transition duration-1000 ease-in-out">
+          <Image
+            src="/metamask-image.png"
+            alt="wallet image"
+            width="100"
+            height="100"
+            className="mx-auto"
+          />
+          <h2 className="text-center text-lg">MetaMask</h2>
         </div>
       </div>
+
+      <Social />
     </div>
   );
 }
