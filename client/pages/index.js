@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Navbar from '../Components/Navbar';
+import Header from '../Components/Header';
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-[#efefef]">
       <Head>
         <title>NFT Market Place</title>
         <meta name="description" content="A market place for NFT" />
@@ -11,7 +11,7 @@ const Home = () => {
       </Head>
 
       <main>
-        <Navbar />
+        <Header />
       </main>
     </div>
   );
