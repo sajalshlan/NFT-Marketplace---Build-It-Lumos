@@ -4,33 +4,39 @@ import NFTCard from './NFTCard';
 const DUMMY_DATA = [
   {
     id: 'c1',
-    title: 'Apes',
+    title: 'Bored Ape',
     img: '/bandar.png',
+    price: 5.2353,
   },
   {
     id: 'c2',
-    title: 'Skeletons',
-    img: '/skeletons.png',
+    title: 'Kook',
+    img: '/nft3.png',
+    price: 2.2125,
   },
   {
     id: 'c3',
-    title: 'Power Rangers',
-    img: '/powerRangers.png',
+    title: 'Weird Eth Diva',
+    img: '/nft2.png',
+    price: 3.2112,
   },
   {
     id: 'c4',
-    title: 'Photography',
+    title: 'Ape Smoker',
     img: '/apeSmoker.png',
+    price: 6.6551,
   },
   {
     id: 'c5',
-    title: 'Games',
-    img: '/games.jpg',
+    title: 'Broken Dreams',
+    img: '/nft1.png',
+    price: 4.0921,
   },
   {
     id: 'c6',
-    title: 'Collectibles',
+    title: 'Chhota Bandar',
     img: '/chhotaBandar.png',
+    price: 5.888,
   },
 ];
 
@@ -38,7 +44,7 @@ const Collections = () => {
   return (
     <section className="w-[85%] mx-auto py-20">
       <h2 className="text-4xl font-bold mb-8">
-        Popular <span className="hover:underline">Collections</span>
+        Popular <span className="hover:underline">NFTs</span>
       </h2>
       <div className="flex flex-wrap justify-between gap-8">
         {DUMMY_DATA.map(nft => (
@@ -46,7 +52,7 @@ const Collections = () => {
             key={nft.id}
             img={nft.img}
             title={nft.title}
-            collection={true}
+            price={nft.price}
           />
         ))}
       </div>

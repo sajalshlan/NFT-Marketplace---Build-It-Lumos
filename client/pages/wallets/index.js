@@ -4,7 +4,7 @@ import wallet from '../../public/wallet.svg';
 
 export default function metaMask() {
   return (
-    <div>
+    <div className='mb-20'>
       <div className="flex flex-col w-56 align-middle justify-center mx-auto mt-20  relative">
         <div className="bg-[#A8D594] rounded-full p-3 h-20 w-20 flex justify-center align-middle mx-auto">
           <Image
