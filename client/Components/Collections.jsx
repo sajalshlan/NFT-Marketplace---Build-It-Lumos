@@ -1,54 +1,52 @@
 import React from 'react';
 import NFTCard from './NFTCard';
-import bandar from '../public/bandar.png';
-import skeletons from '../public/skeletons.png';
-import powerRangers from '../public/powerRangers.png';
-import games from '../public/games.jpg';
 
 const DUMMY_DATA = [
   {
     id: 'c1',
     title: 'Apes',
-    img: { bandar },
+    img: '/bandar.png',
   },
   {
     id: 'c2',
     title: 'Skeletons',
-    img: { skeletons },
+    img: '/skeletons.png',
   },
   {
     id: 'c3',
     title: 'Power Rangers',
-    img: { powerRangers },
+    img: '/powerRangers.png',
   },
   {
     id: 'c4',
     title: 'Photography',
-    img: { bandar },
+    img: '/apeSmoker.png',
   },
   {
     id: 'c5',
     title: 'Games',
-    img: { games },
+    img: '/games.jpg',
   },
   {
     id: 'c6',
     title: 'Collectibles',
-    img: { skeletons },
+    img: '/chhotaBandar.png',
   },
 ];
 
 const Collections = () => {
   return (
-    <section className="w-[85%] mx-auto">
-      <h2>Popular Collections</h2>
+    <section className="w-[85%] mx-auto py-20">
+      <h2 className="text-4xl font-bold mb-8">
+        Popular <span className="hover:underline">Collections</span>
+      </h2>
       <div className="flex flex-wrap justify-between gap-8">
         {DUMMY_DATA.map(nft => (
           <NFTCard
             key={nft.id}
+            img={nft.img}
             title={nft.title}
             collection={true}
-            img={nft.img}
           />
         ))}
       </div>
