@@ -1,6 +1,7 @@
 import React from 'react';
 import NFTCard from './NFTCard';
 import bandar from '../public/bandar.png';
+import skeletons from '../public/skeletons.png';
 
 const title = text => {
   return (
@@ -22,7 +23,7 @@ const Header = () => {
         />
         <NFTCard
           className="absolute left-16 rotate-[16deg] z-10"
-          img={bandar}
+          img={skeletons}
           title="Bored Ape"
           price={5.3432}
         />
