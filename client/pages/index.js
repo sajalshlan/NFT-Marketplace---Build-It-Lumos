@@ -3,7 +3,6 @@ import Collections from '../Components/Collections';
 import CreateNFT from '../Components/CreateNFT';
 import Header from '../Components/Header';
 import JoinCommunity from '../Components/JoinCommunity';
-import Team from '../Components/Team';
 
 const Home = () => {
   return (

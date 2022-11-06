@@ -31,7 +31,7 @@ const Navbar = () => {
       </ul>
       <button
         onClick={connectWalletPageHandler}
-        className="flex items-center gap-2 text-black bg-white py-2 px-4 rounded-lg font-semibold uppercase tracking-wide hover:scale-105 transition-all duration-300 ease-in-out hover:border-2 hover:border-gray-500 hover:bg-[#E8E8E8]"
+        className="flex items-center gap-2 text-black bg-white py-2 px-4 rounded-lg font-semibold uppercase tracking-wide hover:scale-105 transition-all duration-300 ease-in-out  hover:bg-[#E8E8E8]"
       >
         Connect Wallet
         <span>
