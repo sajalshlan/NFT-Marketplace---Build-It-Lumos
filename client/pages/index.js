@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Collections from '../Components/Collections';
 import Header from '../Components/Header';
+import Team from '../Components/Team';
 
 const Home = () => {
   return (
@@ -28,6 +29,7 @@ const Home = () => {
           </div>
         </div>
         <Collections />
+        {/* <Team /> */}
       </main>
     </div>
   );
