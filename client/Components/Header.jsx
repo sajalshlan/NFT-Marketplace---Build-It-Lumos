@@ -22,7 +22,7 @@ const Header = () => {
           price={5.3432}
         />
         <NFTCard
-          className="absolute left-16 rotate-[16deg] z-10"
+          className="absolute left-10 rotate-[10deg] z-10"
           img={skeletons}
           title="Bored Ape"
           price={5.3432}
@@ -52,7 +52,7 @@ const Header = () => {
           {title('Collectibles')}
         </div>
 
-        <button className="text-white uppercase tracking-wide font-semibold py-3 text-2xl bg-[#232323] w-full rounded-lg  mt-20 border-2 border-gray-800 shadow-2xl hover:bg-gray-800 hover:scale-105 transition-all ease-in-out">
+        <button className="text-white hover:text-black hover:text-3xl uppercase tracking-wide font-semibold py-3 text-2xl bg-[#232323] w-full rounded-lg  mt-20 border-2 border-gray-800 shadow-2xl hover:bg-white hover:scale-105 transition-all duration-500 ease-in-out ">
           Mint Now
         </button>
       </div>

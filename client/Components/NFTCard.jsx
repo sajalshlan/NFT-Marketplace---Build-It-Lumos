@@ -20,6 +20,7 @@ const NFTCard = ({ className, title, price, img }) => {
           </span>
         </p>
 
+
         <button className="flex items-center w-full text-white bg-black font-semibold gap-2 justify-center py-2 mt-5 rounded-lg uppercase tracking-wide hover:bg-gray-500 hover:scale-105 transition-all ease-in-out delay-75">
           Discover Art
           <span className="text-white">
