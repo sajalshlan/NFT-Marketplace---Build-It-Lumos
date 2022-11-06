@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import Collections from '../Components/Collections';
+import CreateNFT from '../Components/CreateNFT';
 import Header from '../Components/Header';
 import JoinCommunity from '../Components/JoinCommunity';
 import Team from '../Components/Team';
 
 const Home = () => {
   return (
-    <div className="bg-[#efefef] h-full">
+    <div className="bg-[#efefef] h-full pb-20">
       <Head>
         <title>NFT Market Place</title>
         <meta name="description" content="A market place for NFT" />
@@ -30,6 +31,7 @@ const Home = () => {
           </div>
         </div>
         <Collections />
+        <CreateNFT />
         <JoinCommunity />
       </main>
     </div>

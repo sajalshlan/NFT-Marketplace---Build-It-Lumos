@@ -10,14 +10,14 @@ const DUMMY_DATA = [
   },
   {
     id: 'c2',
-    title: 'Skeletons',
-    img: '/skeletons.png',
+    title: 'Kook',
+    img: '/nft3.png',
     price: 2.2125,
   },
   {
     id: 'c3',
-    title: 'Power Rangers',
-    img: '/powerRangers.png',
+    title: 'Weird Eth Diva',
+    img: '/nft2.png',
     price: 3.2112,
   },
   {
@@ -28,8 +28,8 @@ const DUMMY_DATA = [
   },
   {
     id: 'c5',
-    title: 'Games',
-    img: '/games.jpg',
+    title: 'Broken Dreams',
+    img: '/nft1.png',
     price: 4.0921,
   },
   {
