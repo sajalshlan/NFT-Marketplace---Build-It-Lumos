@@ -25,7 +25,7 @@ const NFTCard = ({ className, title, price, img, collection = false }) => {
           </>
         ) : null}
 
-        <button className="flex items-center w-full text-white bg-black font-semibold gap-2 justify-center py-2 mt-5 rounded-lg uppercase tracking-wide hover:bg-gray-500 hover:scale-105 transition-all ease-in-out delay-75">
+        <button className="flex items-center w-full text-white hover:text-black bg-black font-semibold gap-2 justify-center py-2 mt-5 rounded-lg uppercase tracking-wide hover:bg-white hover:scale-105 transition-all duration-500 ease-in-out delay-75 hover:border-2 hover:border-black">
           {!collection ? 'Discover Art' : 'Check Collection'}
           <span className="text-white">
             <AiOutlineArrowRight />
