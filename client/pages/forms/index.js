@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Social from "G:/NFT MarketPlace Project Hackathon/NFT-Marketplace---Build-It-Lumos/client/Components/.jsx";
+import Social from "G:/NFT MarketPlace Project Hackathon/NFT-Marketplace---Build-It-Lumos/client/Components/Social.jsx";
 
 export default function form() {
   return (
