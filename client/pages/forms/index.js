@@ -1,9 +1,7 @@
-<<<<<<< HEAD
+
 import Image from "next/image";
-import Social from "G:/NFT MarketPlace Project Hackathon/NFT-Marketplace---Build-It-Lumos/client/Components/Social.jsx";
-=======
-import Image from 'next/image';
->>>>>>> a5970a58044874382eabd8760293ed6d82ffed1e
+import Social from "G:/NFT MarketPlace Project Hackathon/NFT-Marketplace---Build-It-Lumos/client/Components/.jsx";
+
 
 export default function form() {
   return (
