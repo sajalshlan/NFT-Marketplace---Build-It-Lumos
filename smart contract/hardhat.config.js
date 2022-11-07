@@ -2,7 +2,6 @@ require("@nomicfoundation/hardhat-toolbox");
 require("hardhat-deploy");
 require("dotenv").config();
 
-const RPC_URL_POLYGON_MUMBAI = process.env.RPC_URL_POLYGON_MUMBAI;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
@@ -11,10 +10,16 @@ module.exports = {
   solidity: "0.8.17",
   defaultNetwork: "hardhat",
   networks: {
+    hardhat: {
+      chainId: 1337,
+    },
     mumbai: {
-      url: RPC_URL_POLYGON_MUMBAI,
+      url: " https://rpc-mumbai.maticvigil.com/",
       accounts: [PRIVATE_KEY],
-      chainId: 80001,
+    },
+    matic: {
+      url: "https://rpc-mainnet.maticvigil.com",
+      accounts: [PRIVATE_KEY],
     },
   },
   etherscan: {

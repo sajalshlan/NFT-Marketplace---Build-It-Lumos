@@ -1,57 +1,88 @@
 import React, { useEffect, useState } from 'react';
 import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
+import { nftAddress, nftMarketAddress } from '../../smart contract/config';
+import NFT from '../../smart contract/artifacts/contracts/NFT.sol/NFT.json';
+import NFTMarket from '../../smart contract/artifacts/contracts/NFTMarket.sol/NFTMarket.json';
+import axios from 'axios';
 
 export const TransactionContext = React.createContext();
 
 export const TransactionProvider = ({ children }) => {
-  //   const [currentAccount, setCurrentAccount] = useState();
+  const [NFTs, setNFTs] = useState([]);
+  const [loading, setLoading] = useState([]);
 
-  //   // check if wallet is connected
-  //   const checkWalletIsConnected = async () => {
-  //     try {
-  //       if (!ethereum) alert('Please install Metamask!! 😕');
+  useEffect(() => {
+    loadNFTs();
+  }, []);
 
-  //       const accounts = await ethereum.request({
-  //         method: 'eth_accounts',
-  //       });
+  const loadNFTs = async () => {
+    const provider = new ethers.providers.JsonRpcProvider();
+    const nftTokenContract = new ethers.Contract(nftAddress, NFT.abi, provider);
+    const marketContract = new ethers.Contract(
+      nftMarketAddress,
+      NFTMarket.abi,
+      provider
+    );
+    const data = await marketContract.fetchMarketItems();
 
-  //       if (accounts.length) {
-  //         setCurrentAccount(accounts[0]);
-  //       } else {
-  //         console.log('No accounts found!!');
-  //       }
-  //     } catch (error) {
-  //       console.error(error);
-  //       throw new Error('No ethereum object!');
-  //     }
-  //   };
+    const itemsArr = await Promise.all(
+      data.map(async element => {
+        const tokenURI = await nftTokenContract.tokenURI(element.tokenId);
+        const meta = await axios.get(tokenURI);
+        let price = ethers.utils.formatUnits(element.price.toString(), 'ether');
+
+        let item = {
+          price,
+          tokenId: element.tokenId.toNumber(),
+          seller: element.seller,
+          owner: element.owner,
+          img: meta.data.image,
+          title: meta.data.name,
+        };
+
+        return item;
+      })
+    );
+
+    setNFTs(itemsArr);
+  };
+
+  const buyNfts = async nft => {
+    const web3Modal = new Web3Modal();
+    const connection = await web3Modal.connect();
+    const provider = new ethers.providers.Web3Provider(connection);
+
+    const signer = provider.getSigner();
+    const contract = new ethers.Contract(
+      nftMarketAddress,
+      NFTMarket.abi,
+      signer
+    );
+
+    const price = ethers.utils.parseUnits(nft.price.toString(), 'ether');
+    const transaction = await contract.createMarketSale(
+      nftAddress,
+      nft.tokenId,
+      {
+        value: price,
+      }
+    );
+
+    await transaction.wait();
+    loadNFTs();
+  };
 
   // connect Wallet fn
   const connectWallet = async () => {
-    // try {
-    //   if (!ethereum) return alert('Please install Metamask!! 😕');
-
-    //   const accounts = await ethereum.request({
-    //     method: 'eth_requestAccounts',
-    //   });
-
-    //   setCurrentAccount(accounts[0]);
-    // } catch (error) {
-    //   console.error(error.message);
-    //   throw new Error('No ethereum object found!!');
-    // }
-
     const web3Modal = new Web3Modal();
-    const connection = await web3Modal.connect();
+    await web3Modal.connect();
   };
 
-  //   useEffect(() => {
-  //     checkWalletIsConnected();
-  //   }, []);
-
   return (
-    <TransactionContext.Provider value={{ connectWallet }}>
+    <TransactionContext.Provider
+      value={{ connectWallet, buyNfts, loadNFTs, NFTs }}
+    >
       {children}
     </TransactionContext.Provider>
   );

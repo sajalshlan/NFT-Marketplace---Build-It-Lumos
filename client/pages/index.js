@@ -3,6 +3,10 @@ import Collections from '../Components/Collections';
 import CreateNFT from '../Components/CreateNFT';
 import Header from '../Components/Header';
 import JoinCommunity from '../Components/JoinCommunity';
+// import { nftAddress, nftMarketAddress } from '../../smart contract/config';
+// import NFT from '../../smart contract/artifacts/contracts/NFT.sol/NFT.json';
+// import NFTMarket from '../../smart contract/artifacts/contracts/NFTMarket.sol/NFTMarket.json';
+// import { useState } from 'react';
 
 const Home = () => {
   return (
