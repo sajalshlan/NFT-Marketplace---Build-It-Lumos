@@ -2,9 +2,18 @@ import React from 'react';
 import { FaDiscord } from 'react-icons/fa';
 import { BsStars } from 'react-icons/bs';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const JoinCommunity = () => {
+  React.useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <section className="w-[85%] mx-auto py-20 rounded-2xl bg-[#0E0E0E] flex flex-col items-center mt-44">
+    <section
+      className="w-[85%] mx-auto py-20 rounded-2xl bg-[#0E0E0E] flex flex-col items-center mt-44"
+      data-aos="zoom-in-up"
+    >
       <h2 className="text-white text-3xl font-semibold mb-6 flex gap-1">
         Join Our Community{' '}
         <span>

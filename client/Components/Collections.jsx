@@ -1,5 +1,7 @@
 import React from 'react';
 import NFTCard from './NFTCard';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const DUMMY_DATA = [
   {
@@ -41,12 +43,18 @@ const DUMMY_DATA = [
 ];
 
 const Collections = () => {
+  React.useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="w-[85%] mx-auto py-20 ">
       <h2 className="text-4xl font-bold mb-8 flex justify-center">
         Popular <span className="hover:underline">NFTs</span>
       </h2>
-      <div className="flex flex-wrap justify-center  md:justify-between mx-auto gap-8">
+      <div
+        className="flex flex-wrap justify-center  md:justify-between mx-auto gap-8"
+        data-aos="fade-left"
+      >
         {DUMMY_DATA.map(nft => (
           <NFTCard
             key={nft.id}
