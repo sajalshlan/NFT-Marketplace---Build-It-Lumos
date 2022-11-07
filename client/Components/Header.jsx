@@ -21,12 +21,7 @@ const Header = () => {
           title="Bored Ape"
           price={5.3432}
         />
-        <NFTCard
-          className="absolute left-10 rotate-[10deg] z-10"
-          img={skeletons}
-          title="Bored Ape"
-          price={5.3432}
-        />
+        <div className=" w-[22rem] absolute justify-between bg-[#cbcbcb5a]  rounded-lg px-5 py-8 flex flex-col h-[32rem] rotate-6 mb-4"></div>
         {/* <NFTCard className="absolute left-20 rotate-[24deg]" /> */}
       </div>
       <div className="w-[35rem]">

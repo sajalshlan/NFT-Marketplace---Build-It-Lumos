@@ -6,9 +6,18 @@ import gallery from '../public/gallery.png';
 import { BsStars } from 'react-icons/bs';
 import { useRouter } from 'next/router';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const card = (img, title, text) => {
+  React.useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="p-10 rounded-2xl w-[22rem]  flex flex-col items-center bg-[#232323] ">
+    <div
+      className="p-10 rounded-2xl w-[22rem]  flex flex-col items-center bg-[#232323] "
+      data-aos="zoom-in-up"
+    >
       <Image src={img} height={120} width={120} className="mb-3" />
       <p className="text-white font-semibold text-2xl mb-3">{title}</p>
       <p className="text-gray-400">{text}</p>
