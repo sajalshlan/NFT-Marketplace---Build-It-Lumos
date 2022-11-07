@@ -3,6 +3,13 @@ import NFTCard from './NFTCard';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const styles = {
+  backgroundImage: 'url(/10.jpg)',
+  backgroundCover: 'cover',
+  opacity: 1,
+  borderRadius: 20,
+};
+
 const DUMMY_DATA = [
   {
     id: 'c1',
@@ -47,24 +54,26 @@ const Collections = () => {
     AOS.init();
   }, []);
   return (
-    <section className="w-[85%] mx-auto py-20 ">
-      <h2 className="text-4xl font-bold mb-8 flex justify-center">
+    <div className="mt-40">
+      <h2 className="text-4xl font-bold mb-8 flex justify-center text-black">
         Popular <span className="hover:underline">NFTs</span>
       </h2>
-      <div
-        className="flex flex-wrap justify-center  md:justify-between mx-auto gap-8"
-        data-aos="fade-left"
-      >
-        {DUMMY_DATA.map(nft => (
-          <NFTCard
-            key={nft.id}
-            img={nft.img}
-            title={nft.title}
-            price={nft.price}
-          />
-        ))}
-      </div>
-    </section>
+      <section className="w-[85%] mx-auto py-20 " style={styles}>
+        <div
+          className="flex flex-wrap justify-center  md:justify-between mx-auto gap-8 px-20"
+          data-aos="fade-left"
+        >
+          {DUMMY_DATA.map(nft => (
+            <NFTCard
+              key={nft.id}
+              img={nft.img}
+              title={nft.title}
+              price={nft.price}
+            />
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 

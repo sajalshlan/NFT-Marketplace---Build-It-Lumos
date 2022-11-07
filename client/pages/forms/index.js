@@ -62,7 +62,7 @@ export default function form() {
           <button
             type="button"
             className="mt-2 w-full inline-block px-6 py-2.5 bg-black text-white font-medium leading-normal  shadow-md hover:bg-white 
-            text-lg  hover:border-2 hover:border-black  hover:text-black focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out rounded-2xl"
+            text-lg  hover:border-2 hover:border-black  hover:text-black focus:shadow-lg focus:outline-none focus:ring-0 active:bg-white active:text-white active:shadow-lg transition duration-150 ease-in-out rounded-2xl"
           >
             Create Digital Art
           </button>

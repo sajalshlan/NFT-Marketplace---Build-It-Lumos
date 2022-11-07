@@ -12,7 +12,7 @@ const NFTCard = ({ className, title, price, img }) => {
   }, []);
   return (
     <div
-      className={` w-[22rem] justify-between bg-[#f3f3f3] shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] rounded-lg px-5 py-8 flex flex-col h-[32rem] ${className}`}
+      className={` w-[22rem] justify-between bg-[#f3f3f3] shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] rounded-lg px-5 py-8 flex flex-col h-[32rem] mb-16 ${className}`}
       data-aos="fade-left"
     >
       <Image src={img} height={200} width={250} className="mx-auto mb-4" />
