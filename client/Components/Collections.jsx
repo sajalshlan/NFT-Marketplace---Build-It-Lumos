@@ -42,11 +42,11 @@ const DUMMY_DATA = [
 
 const Collections = () => {
   return (
-    <section className="w-[85%] mx-auto py-20">
-      <h2 className="text-4xl font-bold mb-8">
+    <section className="w-[85%] mx-auto py-20 ">
+      <h2 className="text-4xl font-bold mb-8 flex justify-center">
         Popular <span className="hover:underline">NFTs</span>
       </h2>
-      <div className="flex flex-wrap justify-between gap-8">
+      <div className="flex flex-wrap justify-center  md:justify-between mx-auto gap-8">
         {DUMMY_DATA.map(nft => (
           <NFTCard
             key={nft.id}

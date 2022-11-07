@@ -13,8 +13,8 @@ const title = text => {
 
 const Header = () => {
   return (
-    <header className="flex w-[85%] justify-between mx-auto h-screen py-20">
-      <div className="flex relative ">
+    <header className="flex flex-wrap w-[85%] justify-between mx-auto h-screen py-20 gap-24">
+      <div className="flex relative">
         <NFTCard
           className="z-20"
           img={bandar}
@@ -30,17 +30,17 @@ const Header = () => {
         {/* <NFTCard className="absolute left-20 rotate-[24deg]" /> */}
       </div>
       <div className="w-[35rem]">
-        <h1 className="text-5xl text-[#232323] font-serif font-semibold leading-[3.2rem] ">
+        <h1 className="text-5xl  text-[#232323] font-serif font-semibold leading-[3rem] md:leading-[3.4rem] ">
           Discover, <br />
           <span className="text-gray-600"> Collect and Sell </span> <br /> Extra
           Ordinary NFTs
         </h1>
-        <p className="text-lg font-medium text-gray-500 mt-3">
+        <p className="sm:text-sm lg:text-lg font-medium text-gray-500 mt-3">
           Explore the top collection of NFTs in this awesome market place and
           buy & sell NFTs at the finest price.
         </p>
 
-        <div className="flex flex-wrap gap-3 mt-10">
+        <div className="flex flex-wrap gap-3 mt-6 md:mt-10">
           {title('Ape Collection')}
           {title('Newlyy')}
           {title('Avatars')}
@@ -52,7 +52,7 @@ const Header = () => {
           {title('Collectibles')}
         </div>
 
-        <button className="text-white hover:text-black hover:text-3xl uppercase tracking-wide font-semibold py-3 text-2xl bg-[#232323] w-full rounded-lg  mt-20 border-2 border-gray-800 shadow-2xl hover:bg-white hover:scale-105 transition-all duration-500 ease-in-out ">
+        <button className="text-white hover:text-black hover:text-3xl uppercase tracking-wide font-semibold py-3 text-2xl bg-[#232323] w-full rounded-lg  mt-10 md:mt-20 border-2 border-gray-800 shadow-2xl hover:bg-white hover:scale-105 transition-all duration-500 ease-in-out ">
           Mint Now
         </button>
       </div>

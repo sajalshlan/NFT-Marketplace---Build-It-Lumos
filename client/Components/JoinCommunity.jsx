@@ -11,14 +11,14 @@ const JoinCommunity = () => {
           <BsStars />
         </span>
       </h2>
-      <p className="text-lg text-gray-500 mb-10">
+      <p className="text-lg px-9 text-gray-500 mb-10">
         Meet the assHub team, artists and collectors for platform updates,
         announcements and more...
       </p>
 
       <button className="py-4 px-5 text-xl rounded-full bg-white font-medium w-[15rem] flex items-center justify-center gap-2 hover:bg-gray-300 hover:scale-105 transition-all ease-in-out">
         Join Discord
-        <span className='text-2xl'>
+        <span className="text-2xl">
           <FaDiscord />
         </span>
       </button>

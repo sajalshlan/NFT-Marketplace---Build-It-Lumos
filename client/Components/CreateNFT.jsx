@@ -32,7 +32,7 @@ const CreateNFT = () => {
         </span>
       </h2>
 
-      <div className="flex justify-between">
+      <div className="flex flex-wrap gap-8 justify-center md:justify-between sm:mx-auto">
         {card(
           pen,
           'Create Artwork',
