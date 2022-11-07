@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import NFTCard from './NFTCard';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { TransactionContext } from '../store/TransactionContext';
 
 const DUMMY_DATA = [
   {
@@ -43,6 +44,8 @@ const DUMMY_DATA = [
 ];
 
 const Collections = () => {
+  const { NFTs } = useContext(TransactionContext);
+
   React.useEffect(() => {
     AOS.init();
   }, []);
@@ -55,12 +58,13 @@ const Collections = () => {
         className="flex flex-wrap justify-center  md:justify-between mx-auto gap-8"
         data-aos="fade-left"
       >
-        {DUMMY_DATA.map(nft => (
+        {DUMMY_DATA.map((nft, index) => (
           <NFTCard
-            key={nft.id}
+            key={index}
             img={nft.img}
             title={nft.title}
             price={nft.price}
+            // buyNFT={buyNFTs(nft)}
           />
         ))}
       </div>
